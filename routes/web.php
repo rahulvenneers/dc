@@ -18,7 +18,8 @@ Route::group(['middleware' => 'auth'], function(){
     return view('welcome');
    
 });
-  Route::get('/store/create', 'StoreController@create'); 
+  Route::get('/emirate/{emirate}/store/create', 'StoreController@create');
+  Route::post('/store/create','StoreController@store');
 });
 
 
